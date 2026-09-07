@@ -48,7 +48,6 @@ jobs:
           NTFY_TOPIC_ONEPIECE: ${{ secrets.NTFY_TOPIC_ONEPIECE }}
           NTFY_TOPIC_POKEMON: ${{ secrets.NTFY_TOPIC_POKEMON }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
         run: python stock_notifier.py --once
 
       - name: Persist state
