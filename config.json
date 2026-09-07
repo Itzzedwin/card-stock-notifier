@@ -81,17 +81,6 @@
       "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
     },
     {
-      "name": "Macy's (Toys R Us) - new One Piece listings",
-      "type": "new_items",
-      "url": "https://www.macys.com/shop/featured/one-piece-card-game",
-      "keywords": [
-        "/shop/product/",
-        "one-piece"
-      ],
-      "id": "macys0001",
-      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
-    },
-    {
       "name": "LA Sports Cards (Burbank/Glendale) - new Pokemon listings",
       "type": "new_items",
       "url": "https://lasportscards.com/collections/pokemon?sort_by=created-descending",
@@ -122,32 +111,6 @@
         "pokemon tcg"
       ],
       "id": "nepokemon",
-      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
-    },
-    {
-      "name": "BoxLunch - new One Piece card listings",
-      "type": "new_items",
-      "url": "https://www.boxlunch.com/search?q=one+piece+card+game",
-      "keywords": [
-        "/product/",
-        "one-piece",
-        "card"
-      ],
-      "allow_empty": true,
-      "id": "blonepiec",
-      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
-    },
-    {
-      "name": "BoxLunch - new Pokemon card listings",
-      "type": "new_items",
-      "url": "https://www.boxlunch.com/search?q=pokemon+card",
-      "keywords": [
-        "/product/",
-        "pokemon",
-        "card"
-      ],
-      "allow_empty": true,
-      "id": "blpokemon",
       "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
     },
     {
@@ -278,24 +241,6 @@
       "keywords": [
         "/pokemon-tcg/"
       ]
-    },
-    {
-      "id": "131e0105",
-      "name": "Best Buy - new One Piece TCG products (needs BESTBUY_API_KEY)",
-      "type": "new_items",
-      "url": "https://api.bestbuy.com/v1/products(search=one%20piece&search=card)?format=json&show=sku,name&pageSize=50&apiKey={BESTBUY_API_KEY}",
-      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}",
-      "item_pattern": "\"sku\":\\s*(\\d+)",
-      "item_url_template": "https://www.bestbuy.com/site/-/{0}.p"
-    },
-    {
-      "id": "c6d387ca",
-      "name": "Best Buy - new Pokemon TCG products (needs BESTBUY_API_KEY)",
-      "type": "new_items",
-      "url": "https://api.bestbuy.com/v1/products(search=pokemon&search=card)?format=json&show=sku,name&pageSize=50&apiKey={BESTBUY_API_KEY}",
-      "ntfy_topic": "{NTFY_TOPIC_POKEMON}",
-      "item_pattern": "\"sku\":\\s*(\\d+)",
-      "item_url_template": "https://www.bestbuy.com/site/-/{0}.p"
     }
   ]
 }
