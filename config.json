@@ -1,0 +1,301 @@
+{
+  "check_interval_minutes": 10,
+  "renotify_minutes": 120,
+  "paused": false,
+  "notifications": {
+    "ntfy_topic": "",
+    "discord_webhook": "",
+    "desktop": false
+  },
+  "products": [
+    {
+      "name": "Official One Piece Card Game - new product launches",
+      "type": "new_items",
+      "url": "https://en.onepiece-cardgame.com/products/",
+      "keywords": [
+        "products/",
+        ".html"
+      ],
+      "id": "dfe105cc",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "LA Sports Cards (Burbank/Glendale) - new One Piece listings",
+      "type": "new_items",
+      "url": "https://lasportscards.com/collections/one-piece",
+      "keywords": [
+        "/products/"
+      ],
+      "id": "f1d209a6",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "LA Sports Cards (Burbank/Glendale) - new Japanese One Piece listings",
+      "type": "new_items",
+      "url": "https://lasportscards.com/collections/one-piece-japanese",
+      "keywords": [
+        "/products/"
+      ],
+      "id": "f9fd9208",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "Premium Bandai US - featured One Piece items",
+      "type": "new_items",
+      "url": "https://p-bandai.com/us/brand/onepiececardgame",
+      "item_pattern": "N[0-9]{13}",
+      "item_url_template": "https://p-bandai.com/us/item/{0}",
+      "id": "pbandaius",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "Premium Bandai Singapore - featured One Piece items",
+      "type": "new_items",
+      "url": "https://p-bandai.com/sg/brand/onepiececardgame",
+      "item_pattern": "N[0-9]{13}",
+      "item_url_template": "https://p-bandai.com/sg/item/{0}",
+      "id": "pbandaisg",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "Hot Topic - new One Piece card listings",
+      "type": "new_items",
+      "url": "https://www.hottopic.com/search?q=one+piece+card+game",
+      "keywords": [
+        "/product/",
+        "one-piece",
+        "card"
+      ],
+      "id": "hottopic1",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "Newegg - new One Piece card listings",
+      "type": "new_items",
+      "url": "https://www.newegg.com/p/pl?d=one+piece+card+game",
+      "keywords": [
+        "newegg.com/p/",
+        "one piece card"
+      ],
+      "id": "newegg001",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "Macy's (Toys R Us) - new One Piece listings",
+      "type": "new_items",
+      "url": "https://www.macys.com/shop/featured/one-piece-card-game",
+      "keywords": [
+        "/shop/product/",
+        "one-piece"
+      ],
+      "id": "macys0001",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "LA Sports Cards (Burbank/Glendale) - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://lasportscards.com/collections/pokemon?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "id": "lapokemon",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "name": "Hot Topic - new Pokemon card listings",
+      "type": "new_items",
+      "url": "https://www.hottopic.com/search?q=pokemon+card+game",
+      "keywords": [
+        "/product/",
+        "pokemon",
+        "card"
+      ],
+      "id": "htpokemon",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "name": "Newegg - new Pokemon TCG listings",
+      "type": "new_items",
+      "url": "https://www.newegg.com/p/pl?d=pokemon+trading+card+game",
+      "keywords": [
+        "newegg.com/p/",
+        "pokemon tcg"
+      ],
+      "id": "nepokemon",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "name": "BoxLunch - new One Piece card listings",
+      "type": "new_items",
+      "url": "https://www.boxlunch.com/search?q=one+piece+card+game",
+      "keywords": [
+        "/product/",
+        "one-piece",
+        "card"
+      ],
+      "allow_empty": true,
+      "id": "blonepiec",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "name": "BoxLunch - new Pokemon card listings",
+      "type": "new_items",
+      "url": "https://www.boxlunch.com/search?q=pokemon+card",
+      "keywords": [
+        "/product/",
+        "pokemon",
+        "card"
+      ],
+      "allow_empty": true,
+      "id": "blpokemon",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "190a9ce0",
+      "name": "CaliPokeHouse (Arcadia) - new One Piece listings",
+      "type": "new_items",
+      "url": "https://calipokehouse.com/collections/one-piece-new-arrivals?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "df5d8718",
+      "name": "CaliPokeHouse (Arcadia) - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://calipokehouse.com/collections/pokemon-new-arrivals-featured?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "a7013935",
+      "name": "The TCG Center - new One Piece listings",
+      "type": "new_items",
+      "url": "https://thetcgcenter.com/collections/one-piece?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "7c1d896f",
+      "name": "RWT Collective (West LA) - new One Piece listings",
+      "type": "new_items",
+      "url": "https://www.rwtcollective.com/collections/one-piece?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "7f6e9f09",
+      "name": "RWT Collective (West LA) - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://www.rwtcollective.com/collections/pokemon?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "76303185",
+      "name": "PokeBox USA (San Gabriel) - new One Piece listings",
+      "type": "new_items",
+      "url": "https://www.pokeboxusa.com/collections/one-piece-card-game/products.json?limit=50",
+      "keywords": [],
+      "item_pattern": "\"handle\":\"([^\"]+)\"",
+      "item_url_template": "https://www.pokeboxusa.com/products/{0}",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "338cbf7b",
+      "name": "PokeBox USA (San Gabriel) - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://www.pokeboxusa.com/collections/pokemon-tcg/products.json?limit=50",
+      "keywords": [],
+      "item_pattern": "\"handle\":\"([^\"]+)\"",
+      "item_url_template": "https://www.pokeboxusa.com/products/{0}",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "01ef959c",
+      "name": "Stomping Grounds TCG - new One Piece listings",
+      "type": "new_items",
+      "url": "https://www.stompinggroundstcg.com/collections/one-piece-card-game?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "3825ec38",
+      "name": "Golden Apple Comics (Melrose) - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://www.goldenapplecomics.com/collections/pokemon-cards?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "418e5836",
+      "name": "Stomping Grounds TCG - new Pokemon listings",
+      "type": "new_items",
+      "url": "https://www.stompinggroundstcg.com/collections/pokemon-trading-card-game?sort_by=created-descending",
+      "keywords": [
+        "/products/"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}"
+    },
+    {
+      "id": "fb66b4cc",
+      "name": "LA Sports Cards (Burbank/Glendale) - new Japanese Pokemon listings",
+      "type": "new_items",
+      "url": "https://lasportscards.com/collections/pokemon-japanese?sort_by=created-descending",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}",
+      "keywords": [
+        "/products/"
+      ]
+    },
+    {
+      "id": "b60d096b",
+      "name": "PokeBox USA (San Gabriel) - new Japanese Pokemon listings",
+      "type": "new_items",
+      "url": "https://www.pokeboxusa.com/collections/japanese-pokemon-tcg/products.json?limit=50",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}",
+      "item_pattern": "\"handle\":\"([^\"]+)\"",
+      "item_url_template": "https://www.pokeboxusa.com/products/{0}"
+    },
+    {
+      "id": "fee81b39",
+      "name": "Official Pokemon TCG - new product launches",
+      "type": "new_items",
+      "url": "https://www.pokemon.com/us/pokemon-tcg/",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}",
+      "keywords": [
+        "/pokemon-tcg/"
+      ]
+    },
+    {
+      "id": "131e0105",
+      "name": "Best Buy - new One Piece TCG products (needs BESTBUY_API_KEY)",
+      "type": "new_items",
+      "url": "https://api.bestbuy.com/v1/products(search=one%20piece&search=card)?format=json&show=sku,name&pageSize=50&apiKey={BESTBUY_API_KEY}",
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}",
+      "item_pattern": "\"sku\":\\s*(\\d+)",
+      "item_url_template": "https://www.bestbuy.com/site/-/{0}.p"
+    },
+    {
+      "id": "c6d387ca",
+      "name": "Best Buy - new Pokemon TCG products (needs BESTBUY_API_KEY)",
+      "type": "new_items",
+      "url": "https://api.bestbuy.com/v1/products(search=pokemon&search=card)?format=json&show=sku,name&pageSize=50&apiKey={BESTBUY_API_KEY}",
+      "ntfy_topic": "{NTFY_TOPIC_POKEMON}",
+      "item_pattern": "\"sku\":\\s*(\\d+)",
+      "item_url_template": "https://www.bestbuy.com/site/-/{0}.p"
+    }
+  ]
+}
