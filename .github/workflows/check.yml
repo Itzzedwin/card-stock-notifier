@@ -2,7 +2,10 @@ name: Check stock
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # GitHub may delay these; expect 10-20 min in practice
+    # Fallback only. An external scheduler drives the real cadence by calling
+    # workflow_dispatch, which GitHub runs immediately instead of queueing.
+    # This exists so checks continue if that scheduler ever stops.
+    - cron: "17 */6 * * *"
   workflow_dispatch:          # lets the web GUI trigger "check now"
     inputs:
       test_ping:
