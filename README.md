@@ -1,0 +1,211 @@
+# Card Stock Notifier
+
+Pings your phone the moment One Piece or Pokemon cards restock or a new
+product launches — at the official Bandai shops, LA-area card stores,
+Hot Topic, BoxLunch, Newegg, and Macy's out of the box, plus any store
+page you add.
+
+## 📱 Get pings on your phone — 3 steps, nothing to download on a computer
+
+The watcher already runs in the cloud, around the clock. All you need is the
+phone app and the team's topic name.
+
+1. Install the free **ntfy** app
+   ([iPhone](https://apps.apple.com/us/app/ntfy/id1625396347) /
+   [Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy)).
+2. In ntfy, tap **+ Subscribe to topic** and type the team's topic name
+   exactly.
+3. Open **https://itzzedwin.github.io/card-stock-notifier/start.html**,
+   type the same topic name, and tap **Send a test ping to my phone**.
+   If your phone buzzes, you're done.
+
+You can share a link that already fills in the topic:
+`https://itzzedwin.github.io/card-stock-notifier/start.html?topic=<the-topic>`.
+
+Live status (what's watched, when it was last checked) is at
+**https://itzzedwin.github.io/card-stock-notifier/** — viewing needs no
+login. Editing needs a one-time token (see "GitHub-hosted" below).
+
+**Important:** the schedule is set to every 10 minutes, but GitHub delays
+scheduled jobs heavily — in practice checks have been landing **2–5 hours
+apart**. A ping means "go now", and a restock that appears and sells out
+between checks will be missed.
+
+### Optional: the Windows status app
+
+Only useful if you want a desktop status window. It does not do any watching
+in cloud mode.
+
+1. **[Download CardStockNotifier.exe](https://github.com/Itzzedwin/card-stock-notifier/releases/download/windows-app/CardStockNotifier.exe)**
+2. Put it in its **own folder** (it saves settings next to itself) and
+   double-click it. Windows SmartScreen will warn because the file is
+   unsigned — click **More info → Run anyway**.
+3. In the wizard pick **"In the cloud"**. Choosing **"On this computer"**
+   instead runs a second, independent watcher that only works while the app
+   is open — and if it uses the same topic you'll get every ping twice.
+
+---
+
+## How it works
+
+Watches product pages and sends a push notification the moment an item flips
+from out-of-stock to in-stock, or a new listing appears on a store's page.
+Works for any retailer whose pages are plain HTML (TCGPlayer listings, the
+official One Piece card game shop, most local game store webstores, etc.).
+
+Three ways to run it: **hosted on GitHub** (no server needed, recommended),
+the desktop app / local **web GUI**, or a headless CLI.
+
+## GitHub-hosted (serverless)
+
+A GitHub Actions workflow (`.github/workflows/check.yml`) runs the checker
+on a `*/10` cron schedule (GitHub delays scheduled jobs; observed cadence is
+2–5 hours) and a GitHub Pages site gives a GUI usable from any device to see
+status and edit watch targets. Dispatching the workflow with the `test_ping`
+input sends a test notification to the `NTFY_TOPIC` secret without checking
+stock — the site's "Send a test ping through the cloud" button does this.
+
+One-time setup for whoever will use it:
+
+1. **Notifications** — install the ntfy app (iOS/Android), subscribe to a
+   hard-to-guess topic name (topics are public, e.g. `onepiece-restock-x7k2p9`),
+   then save that name as a repository **secret** called `NTFY_TOPIC`
+   (repo → Settings → Secrets and variables → Actions). Optionally add a
+   `DISCORD_WEBHOOK` secret too. Secrets keep the ping channel private even
+   though the repo is public.
+
+   A target URL may contain `{SOME_SECRET}` placeholders, filled from
+   same-named repo secrets at check time — for retailer API keys that can't
+   go in the public config (pass the secret through in `check.yml` too).
+   Targets with an unset secret show "Needs an API-key secret" and are
+   skipped.
+2. **Editing from the GUI** — the Pages site is view-only until you give it a
+   token. Create a *fine-grained* personal access token (GitHub → Settings →
+   Developer settings → Fine-grained tokens) scoped to **only this repo** with
+   **Contents: Read and write** and **Actions: Read and write**, and paste it
+   into the GUI's "Editing access" panel (stored only in that browser).
+   The token owner needs push access to the repo, so add your coworker as a
+   collaborator first.
+3. Add watch targets in the GUI. "Run check now" triggers an immediate check;
+   otherwise the schedule handles it. Current status is committed back to
+   `state.json` after every run.
+
+There are two watch types:
+
+- **Restock** — a specific product page, detected via sold-out/in-stock phrases
+  (as described below).
+- **Launches** (`"type": "new_items"`) — a store or category page, watched for
+  *new listings appearing*. Links matching all the configured `keywords`
+  (against URL + link text, case-insensitive) are tracked; the first check
+  records a baseline and later checks ping when a new one shows up. The config
+  ships with launch watches on the official One Piece Card Game products page
+  and LA Sports Cards' One Piece collections. Launch watches run everywhere —
+  the Actions checker, the local web GUI, and the CLI.
+
+## Local alternatives
+
+If you'd rather not rely on the cloud watcher — or want checks more often than
+GitHub's delayed schedule delivers — run the watcher yourself. Three ways,
+all sharing the same `config.json`:
+
+- **Desktop app** (`desktop.py`) — a status window with a first-run wizard.
+  Choose "On this computer" and it runs the checker and the control panel
+  itself. Prebuilt for Windows; run from source on macOS and Linux.
+- **Local web GUI** (`app.py`) — the control panel on
+  http://localhost:8080, with a background watcher on an interval you pick.
+- **Headless CLI** (`stock_notifier.py`) — no GUI, for cron or an always-on
+  machine.
+
+Two caveats for all of them: the machine has to stay awake for checks to
+happen, and if a local watcher uses the **same ntfy topic** as the cloud one,
+every restock pings you twice — give the local watcher its own topic.
+
+Setup instructions for each are under "For developers" below.
+
+## For developers (optional — users never need this)
+
+Everything below is for working on the code itself. The Windows app above is
+prebuilt by the `build-windows.yml` workflow, and the cloud watcher runs
+itself via `check.yml`.
+
+### Dev setup
+
+```bash
+cd stock-notifier
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Local web GUI
+
+```bash
+python app.py
+```
+
+Open **http://localhost:8080**. From there you can:
+
+- **Add watch targets** — name, product URL, and the phrases that indicate
+  sold-out vs. in-stock. Open the product page while it's out of stock and copy
+  the exact wording (e.g. "Sold Out") into the out-of-stock field; put what an
+  in-stock page shows (usually "Add to Cart") in the in-stock field.
+  Out-of-stock phrases are checked first, since many pages contain a disabled
+  "Add to Cart" button even when sold out. Matching is case-insensitive.
+  New/edited targets are checked immediately.
+- **Set notifications** — ntfy topic, Discord webhook, and/or a desktop popup —
+  and send a test ping to confirm they work.
+- **Tune the schedule** — check interval, optional re-ping if an item stays in
+  stock, and a pause toggle.
+- **See live status** — each target shows In stock / Out of stock / Unknown /
+  Fetch failed, when it was last checked, and a countdown to the next sweep.
+  "Check now" buttons force an immediate check.
+
+The server binds to `127.0.0.1` (local only). To reach the GUI from another
+machine on your network, change the last line of `app.py` to
+`app.run(host="0.0.0.0", port=8080)` — but note there's no login, so only do
+that on a trusted network.
+
+Everything is stored in `config.json` (targets + settings) and
+`webstate.json` (runtime status) next to the script. Notifications fire only
+on the transition to in-stock, so you don't get spammed every cycle. If a page
+redesign breaks the phrase markers, you get a one-time "unknown status"
+warning instead of silent failure.
+
+### Notification channels
+
+- **ntfy (recommended, free, pings your phone):** install the ntfy app
+  (iOS/Android), subscribe to a topic with a hard-to-guess name (topics are
+  public, so use something like `onepiece-restock-x7k2p9`), and enter that
+  same name in the GUI.
+- **Discord:** in any server channel → Edit Channel → Integrations →
+  Webhooks → New Webhook, and paste the URL into the GUI.
+- **Desktop:** a popup on the machine running the server — native
+  Notification Center on macOS, a balloon tip on Windows, `notify-send` on
+  Linux. On macOS the first popup needs notification permission: allow
+  "Script Editor" (or your terminal) under System Settings → Notifications.
+
+### Headless CLI
+
+The original CLI still works and shares `config.json` (edit it by hand or via
+the GUI first — see `config.example.json` for the format):
+
+```bash
+python stock_notifier.py           # run forever
+python stock_notifier.py --once    # single check, for cron
+```
+
+Cron example (CLI keeps its own `state.json` between runs):
+
+```cron
+*/10 * * * * cd /path/to/stock-notifier && .venv/bin/python stock_notifier.py --once >> notifier.log 2>&1
+```
+
+Don't run the CLI loop and the web server at the same time — they'd each ping
+independently.
+
+## Caveats
+
+- Some big-box sites (Walmart, Target, sometimes Best Buy) serve bot-challenge
+  pages to scripts. If a target always reports "Unknown", that retailer is
+  blocking simple fetchers — prefer TCGPlayer or smaller card shops for those
+  listings, or lengthen the interval.
+- The machine running the server has to stay on for checks to happen.
