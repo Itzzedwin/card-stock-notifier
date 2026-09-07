@@ -190,22 +190,6 @@
     "checked_at": 1788820224.2650094,
     "notified_at": 0
   },
-  "BoxLunch - new One Piece card listings": {
-    "status": "watching",
-    "seen": [
-      "https://www.boxlunch.com/product/bandai-namco-one-piece-card-game-the-worlds-strongest-warrior-booster-pack/36426029.html"
-    ],
-    "item_count": 0,
-    "checked_at": 1788820224.8544168,
-    "notified_at": 1788819324.1031806
-  },
-  "BoxLunch - new Pokemon card listings": {
-    "status": "watching",
-    "seen": [],
-    "item_count": 0,
-    "checked_at": 1788820225.304778,
-    "notified_at": 0
-  },
   "CaliPokeHouse (Arcadia) - new One Piece listings": {
     "status": "watching",
     "seen": [
@@ -657,16 +641,6 @@
     ],
     "item_count": 37,
     "checked_at": 1788820232.617951,
-    "notified_at": 0
-  },
-  "Best Buy - new One Piece TCG products (needs BESTBUY_API_KEY)": {
-    "status": "missing_secret",
-    "checked_at": 1788820232.6186643,
-    "notified_at": 0
-  },
-  "Best Buy - new Pokemon TCG products (needs BESTBUY_API_KEY)": {
-    "status": "missing_secret",
-    "checked_at": 1788820232.619127,
     "notified_at": 0
   }
 }
