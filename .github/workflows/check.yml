@@ -34,23 +34,7 @@ jobs:
         env:
           NTFY_TOPIC_ONEPIECE: ${{ secrets.NTFY_TOPIC_ONEPIECE }}
           NTFY_TOPIC_POKEMON: ${{ secrets.NTFY_TOPIC_POKEMON }}
-        run: |
-          sent=0
-          for pair in "One Piece:$NTFY_TOPIC_ONEPIECE" "Pokemon:$NTFY_TOPIC_POKEMON"; do
-            label="${pair%%:*}"; topic="${pair#*:}"
-            if [ -z "$topic" ]; then
-              echo "::warning::no secret set for the $label topic - skipped"
-              continue
-            fi
-            curl -sS -f -o /dev/null \
-              -H "Title: Test - the cloud watcher can reach you ($label)" \
-              -H "Priority: high" -H "Tags: white_check_mark,cloud" \
-              -d "This came from GitHub's servers, so real $label pings arrive the same way." \
-              "https://ntfy.sh/$topic"
-            echo "test ping sent to the $label topic"
-            sent=$((sent+1))
-          done
-          if [ "$sent" -eq 0 ]; then echo "no topic secrets are set"; exit 1; fi
+        run: python ci_test_ping.py
 
       - name: Run stock check
         if: ${{ !(inputs.test_ping == true || inputs.test_ping == 'true') }}
