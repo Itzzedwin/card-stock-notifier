@@ -1,0 +1,42 @@
+name: Build Windows app
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyinstaller flask requests
+
+      - name: Build executable
+        run: >
+          pyinstaller --onefile --windowed --name CardStockNotifier
+          --add-data "templates;templates"
+          --add-data "config.json;."
+          desktop.py
+
+      - name: Self-test the executable
+        shell: bash
+        run: |
+          ./dist/CardStockNotifier.exe --selftest
+          cat dist/notifier.log 2>/dev/null || true
+
+      - name: Publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete windows-app --cleanup-tag -y || true
+          gh release create windows-app dist/CardStockNotifier.exe \
+            --title "Windows app" \
+            --notes "**Install:** download CardStockNotifier.exe below, put it in its own folder, and double-click it. Windows SmartScreen will warn because the file is unsigned - click **More info**, then **Run anyway**. A setup wizard walks you through the rest; pick **In the cloud** and your computer doesn't even need to stay on. To get pings on your phone, install the free **ntfy** app and subscribe to the team's topic name."
