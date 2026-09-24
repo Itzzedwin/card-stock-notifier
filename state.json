@@ -1,6 +1,6 @@
 {
   "Official One Piece Card Game - new product launches": {
-    "status": "unknown",
+    "status": "watching",
     "seen": [
       "https://en.onepiece-cardgame.com/products/3rd_anniversary_set_cn.html",
       "https://en.onepiece-cardgame.com/products/card_collection_asl.html",
@@ -16,7 +16,8 @@
       "https://en.onepiece-cardgame.com/products/sleeve046.html",
       "https://en.onepiece-cardgame.com/products/ts03.html"
     ],
-    "checked_at": 1790267422.0686038,
+    "item_count": 12,
+    "checked_at": 1790268316.7112362,
     "notified_at": 1789720220.5333433
   },
   "LA Sports Cards (Burbank/Glendale) - new One Piece listings": {
@@ -44,7 +45,7 @@
       "https://lasportscards.com/products/12099"
     ],
     "item_count": 20,
-    "checked_at": 1790267422.8900523,
+    "checked_at": 1790268317.2462485,
     "notified_at": 0
   },
   "LA Sports Cards (Burbank/Glendale) - new Japanese One Piece listings": {
@@ -57,7 +58,7 @@
       "https://lasportscards.com/products/one-piece-the-new-emperor-japanese-booster-pack-op-09"
     ],
     "item_count": 5,
-    "checked_at": 1790267423.2435262,
+    "checked_at": 1790268317.7252302,
     "notified_at": 0
   },
   "Premium Bandai US - featured One Piece items": {
@@ -70,7 +71,7 @@
       "https://p-bandai.com/us/item/N2747766001001"
     ],
     "item_count": 5,
-    "checked_at": 1790267423.4342396,
+    "checked_at": 1790268318.2877972,
     "notified_at": 0
   },
   "Premium Bandai Singapore - featured One Piece items": {
@@ -83,7 +84,7 @@
       "https://p-bandai.com/sg/item/N2747766001001"
     ],
     "item_count": 5,
-    "checked_at": 1790267423.6143544,
+    "checked_at": 1790268318.5217662,
     "notified_at": 0
   },
   "Hot Topic - new One Piece card listings": {
@@ -97,7 +98,7 @@
       "https://www.hottopic.com/product/top-trumps-specials-one-piece-card-game/36454921.html"
     ],
     "item_count": 5,
-    "checked_at": 1790267424.4494047,
+    "checked_at": 1790268319.2328136,
     "notified_at": 1788884120.5112953
   },
   "Newegg - new One Piece card listings": {
@@ -105,7 +106,7 @@
     "seen": [
       "https://www.newegg.com/p/3GP-0005-00071"
     ],
-    "checked_at": 1790267425.386659,
+    "checked_at": 1790268320.0570965,
     "notified_at": 0
   },
   "LA Sports Cards (Burbank/Glendale) - new Pokemon listings": {
@@ -180,7 +181,7 @@
       "https://lasportscards.com/products/trick-or-trade-booster-bundle-2024-mini-booster-pack-trick-or-trade-booster-bundle-2024-ttbb24"
     ],
     "item_count": 50,
-    "checked_at": 1790267425.9093263,
+    "checked_at": 1790268321.2522616,
     "notified_at": 1789669827.4751565
   },
   "Hot Topic - new Pokemon card listings": {
@@ -190,7 +191,7 @@
       "https://www.hottopic.com/product/pokemon-cardquest-mystery-booster-pack-toploader-set-hot-topic-exclusive/34919296.html"
     ],
     "item_count": 2,
-    "checked_at": 1790267426.7246377,
+    "checked_at": 1790268321.988759,
     "notified_at": 0
   },
   "Newegg - new Pokemon TCG listings": {
@@ -206,7 +207,7 @@
       "https://www.newegg.com/p/3GP-0006-00018"
     ],
     "item_count": 7,
-    "checked_at": 1790267427.8322318,
+    "checked_at": 1790268322.9206996,
     "notified_at": 1789171228.2201638
   },
   "CaliPokeHouse (Arcadia) - new One Piece listings": {
@@ -237,7 +238,7 @@
       "https://calipokehouse.com/products/pre-order-one-piece-trading-card-game-prb-02-booster-box-japanese-sealed"
     ],
     "item_count": 23,
-    "checked_at": 1790267428.249245,
+    "checked_at": 1790268323.387351,
     "notified_at": 0
   },
   "CaliPokeHouse (Arcadia) - new Pokemon listings": {
@@ -257,7 +258,7 @@
       "https://calipokehouse.com/products/pokemon-trading-card-game-storm-emeralda-booster-box-japanese-sealed"
     ],
     "item_count": 10,
-    "checked_at": 1790267428.5615373,
+    "checked_at": 1790268323.7430685,
     "notified_at": 1789982122.2884254
   },
   "The TCG Center - new One Piece listings": {
@@ -277,7 +278,7 @@
       "https://thetcgcenter.com/products/the-worlds-strongest-warriors-sleeved-booster-pack-the-worlds-strongest-warriors-op17"
     ],
     "item_count": 12,
-    "checked_at": 1790267428.9326756,
+    "checked_at": 1790268323.9671104,
     "notified_at": 0
   },
   "RWT Collective (West LA) - new One Piece listings": {
@@ -292,7 +293,7 @@
       "https://www.rwtcollective.com/products/royal-blood-sleeved-booster-pack-royal-blood-op10"
     ],
     "item_count": 7,
-    "checked_at": 1790267429.2618768,
+    "checked_at": 1790268324.6690607,
     "notified_at": 0
   },
   "RWT Collective (West LA) - new Pokemon listings": {
@@ -306,7 +307,7 @@
       "https://www.rwtcollective.com/products/surprise-box-pokemon-prismatic-evolutions"
     ],
     "item_count": 6,
-    "checked_at": 1790267429.6089044,
+    "checked_at": 1790268324.8756893,
     "notified_at": 0
   },
   "PokeBox USA (San Gabriel) - new One Piece listings": {
@@ -364,7 +365,7 @@
       "https://www.pokeboxusa.com/products/one-piece-sweet-dreams-blind-box"
     ],
     "item_count": 50,
-    "checked_at": 1790267429.8863559,
+    "checked_at": 1790268325.0848703,
     "notified_at": 0
   },
   "PokeBox USA (San Gabriel) - new Pokemon listings": {
@@ -423,7 +424,7 @@
       "https://www.pokeboxusa.com/products/wild-force-sv5k-booster-pack-japanese-pokemon-tcg"
     ],
     "item_count": 50,
-    "checked_at": 1790267430.1064618,
+    "checked_at": 1790268325.4410682,
     "notified_at": 1789643723.290996
   },
   "Stomping Grounds TCG - new One Piece listings": {
@@ -455,7 +456,7 @@
       "https://www.stompinggroundstcg.com/products/the-best-vol-2-premium-booster-booster-box-englishprb-02"
     ],
     "item_count": 24,
-    "checked_at": 1790267430.5358026,
+    "checked_at": 1790268325.975986,
     "notified_at": 0
   },
   "Golden Apple Comics (Melrose) - new Pokemon listings": {
@@ -532,7 +533,7 @@
       "https://goldenapplecomics.com/products/yu-nagaba-x-pokemon-card-game-special-box-2021"
     ],
     "item_count": 36,
-    "checked_at": 1790267431.5680532,
+    "checked_at": 1790268326.7895224,
     "notified_at": 1790174726.435977
   },
   "Stomping Grounds TCG - new Pokemon listings": {
@@ -564,7 +565,7 @@
       "https://www.stompinggroundstcg.com/products/pokemon-mega-zygarde-ex-premium-collection"
     ],
     "item_count": 24,
-    "checked_at": 1790267431.9151022,
+    "checked_at": 1790268327.2556632,
     "notified_at": 0
   },
   "LA Sports Cards (Burbank/Glendale) - new Japanese Pokemon listings": {
@@ -601,7 +602,7 @@
       "https://lasportscards.com/products/snow-hazard-booster-pack"
     ],
     "item_count": 20,
-    "checked_at": 1790267432.3983898,
+    "checked_at": 1790268329.6436195,
     "notified_at": 1789669838.6769133
   },
   "PokeBox USA (San Gabriel) - new Japanese Pokemon listings": {
@@ -660,7 +661,7 @@
       "https://www.pokeboxusa.com/products/wild-force-sv5k-booster-pack-japanese-pokemon-tcg"
     ],
     "item_count": 50,
-    "checked_at": 1790267432.6316476,
+    "checked_at": 1790268330.4325354,
     "notified_at": 1788866128.35979
   },
   "Official Pokemon TCG - new product launches": {
@@ -717,7 +718,7 @@
       "https://www.pokemon.com/us/pokemon-tcg/trading-card-expansions/"
     ],
     "item_count": 38,
-    "checked_at": 1790267432.8614447,
+    "checked_at": 1790268330.6419833,
     "notified_at": 1789564527.7335606
   }
 }
