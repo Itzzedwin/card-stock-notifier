@@ -109,6 +109,24 @@
         "/products/"
       ],
       "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
+    },
+    {
+      "id": "7b72034a",
+      "name": "Premium Bandai US - One Piece Japanese 4th Anniversary Set (RESTOCK WATCH)",
+      "url": "https://p-bandai.com/us/series/onepiece-series",
+      "scope_pattern": "\"productCode\":\"N2873815002\".{0,6000}?\"flags\":\\[[^\\]]*\\]",
+      "out_of_stock_text": [
+        "OUT_OF_STOCK",
+        "SOLD_OUT",
+        "CHANCE_TO_BUY",
+        "END_OF_SALE"
+      ],
+      "in_stock_text": [
+        "IN_STOCK",
+        "PRE_ORDER",
+        "ORDER_ACCEPTING"
+      ],
+      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
     }
   ]
 }
