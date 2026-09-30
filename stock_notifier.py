@@ -64,7 +64,20 @@ def check_product(product):
     """Return 'in_stock', 'out_of_stock', or 'unknown' for one product entry."""
     resp = requests.get(resolve_url(product["url"]), headers=DEFAULT_HEADERS, timeout=30)
     resp.raise_for_status()
-    page = resp.text.lower()
+    page = resp.text
+
+    # Optional: narrow the page to one region before matching phrases. Needed
+    # when a listing page carries many products and a bare "in stock" anywhere
+    # on it would be another product's. The regex runs against the original
+    # text, before lower-casing, so it can match case-sensitive JSON keys.
+    scope = product.get("scope_pattern")
+    if scope:
+        found = re.search(scope, page, re.S)
+        if not found:
+            return "unknown"
+        page = found.group(0)
+
+    page = page.lower()
 
     # Out-of-stock markers win: many pages contain "add to cart" in dead buttons.
     for marker in product.get("out_of_stock_text", []):
