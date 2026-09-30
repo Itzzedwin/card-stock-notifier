@@ -43,7 +43,7 @@
       "name": "Premium Bandai US - new One Piece items",
       "type": "new_items",
       "url": "https://p-bandai.com/us/series/onepiece-series",
-      "item_pattern": "[A-Z][0-9]{10,12}",
+      "item_pattern": "\"productCode\":\"([A-Z][0-9]{9,13})\"",
       "item_url_template": "https://p-bandai.com/us/item/{0}",
       "id": "pbandaius",
       "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
