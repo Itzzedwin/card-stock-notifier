@@ -61,17 +61,6 @@
       "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
     },
     {
-      "name": "Newegg - new One Piece card listings",
-      "type": "new_items",
-      "url": "https://www.newegg.com/p/pl?d=one+piece+card+game",
-      "keywords": [
-        "newegg.com/p/",
-        "one piece card"
-      ],
-      "id": "newegg001",
-      "ntfy_topic": "{NTFY_TOPIC_ONEPIECE}"
-    },
-    {
       "id": "190a9ce0",
       "name": "CaliPokeHouse (Arcadia) - new One Piece listings",
       "type": "new_items",
