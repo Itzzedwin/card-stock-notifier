@@ -9,7 +9,7 @@ on:
   workflow_dispatch:          # lets the web GUI trigger "check now"
     inputs:
       test_ping:
-        description: "Send a test notification to both topics instead of checking stock"
+        description: "Send a test notification instead of checking stock"
         type: boolean
         default: false
 
@@ -36,7 +36,6 @@ jobs:
         if: ${{ inputs.test_ping == true || inputs.test_ping == 'true' }}
         env:
           NTFY_TOPIC_ONEPIECE: ${{ secrets.NTFY_TOPIC_ONEPIECE }}
-          NTFY_TOPIC_POKEMON: ${{ secrets.NTFY_TOPIC_POKEMON }}
         run: python ci_test_ping.py
 
       - name: Run stock check
@@ -46,7 +45,6 @@ jobs:
           # Piece and Pokemon alerts land on separate topics without either
           # name appearing in this public repo.
           NTFY_TOPIC_ONEPIECE: ${{ secrets.NTFY_TOPIC_ONEPIECE }}
-          NTFY_TOPIC_POKEMON: ${{ secrets.NTFY_TOPIC_POKEMON }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: python stock_notifier.py --once
 
