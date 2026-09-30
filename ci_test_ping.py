@@ -13,7 +13,7 @@ import sys
 import stock_notifier as core
 
 SITE = "https://itzzedwin.github.io/card-stock-notifier/"
-TOPICS = [("One Piece", "NTFY_TOPIC_ONEPIECE"), ("Pokemon", "NTFY_TOPIC_POKEMON")]
+TOPICS = [("One Piece", "NTFY_TOPIC_ONEPIECE")]
 
 
 def main():
@@ -35,8 +35,8 @@ def main():
             delivered.append(label)
 
     if not configured:
-        sys.exit("No topic secrets are set - add NTFY_TOPIC_ONEPIECE and/or "
-                 "NTFY_TOPIC_POKEMON under Settings > Secrets and variables.")
+        sys.exit("NTFY_TOPIC_ONEPIECE is not set - add it under "
+                 "Settings > Secrets and variables > Actions.")
     if not delivered:
         sys.exit("Every test notification failed to send - see the errors above.")
     print("delivered to:", ", ".join(delivered))
