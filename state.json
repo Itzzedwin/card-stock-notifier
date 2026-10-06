@@ -19,7 +19,7 @@
       "https://en.onepiece-cardgame.com/products/ts03.html"
     ],
     "item_count": 12,
-    "checked_at": 1791262822.5728867,
+    "checked_at": 1791263717.0812728,
     "notified_at": 1790932515.622118
   },
   "LA Sports Cards (Burbank/Glendale) - new One Piece listings": {
@@ -47,7 +47,7 @@
       "https://lasportscards.com/products/12099"
     ],
     "item_count": 20,
-    "checked_at": 1791262823.0336738,
+    "checked_at": 1791263717.5428917,
     "notified_at": 0
   },
   "LA Sports Cards (Burbank/Glendale) - new Japanese One Piece listings": {
@@ -60,7 +60,7 @@
       "https://lasportscards.com/products/one-piece-the-new-emperor-japanese-booster-pack-op-09"
     ],
     "item_count": 5,
-    "checked_at": 1791262823.4262946,
+    "checked_at": 1791263717.9807327,
     "notified_at": 0
   },
   "Hot Topic - new One Piece card listings": {
@@ -74,7 +74,7 @@
       "https://www.hottopic.com/product/top-trumps-specials-one-piece-card-game/36454921.html"
     ],
     "item_count": 5,
-    "checked_at": 1791262824.503378,
+    "checked_at": 1791263719.420759,
     "notified_at": 1788884120.5112953
   },
   "CaliPokeHouse (Arcadia) - new One Piece listings": {
@@ -105,7 +105,7 @@
       "https://calipokehouse.com/products/pre-order-one-piece-trading-card-game-prb-02-booster-box-japanese-sealed"
     ],
     "item_count": 23,
-    "checked_at": 1791262824.9055457,
+    "checked_at": 1791263719.825312,
     "notified_at": 0
   },
   "The TCG Center - new One Piece listings": {
@@ -125,7 +125,7 @@
       "https://thetcgcenter.com/products/the-worlds-strongest-warriors-sleeved-booster-pack-the-worlds-strongest-warriors-op17"
     ],
     "item_count": 12,
-    "checked_at": 1791262825.2415454,
+    "checked_at": 1791263720.3701088,
     "notified_at": 0
   },
   "RWT Collective (West LA) - new One Piece listings": {
@@ -140,7 +140,7 @@
       "https://www.rwtcollective.com/products/royal-blood-sleeved-booster-pack-royal-blood-op10"
     ],
     "item_count": 7,
-    "checked_at": 1791262825.6709619,
+    "checked_at": 1791263720.7903054,
     "notified_at": 0
   },
   "PokeBox USA (San Gabriel) - new One Piece listings": {
@@ -198,7 +198,7 @@
       "https://www.pokeboxusa.com/products/one-piece-sweet-dreams-blind-box"
     ],
     "item_count": 50,
-    "checked_at": 1791262825.9552784,
+    "checked_at": 1791263721.1060266,
     "notified_at": 0
   },
   "Stomping Grounds TCG - new One Piece listings": {
@@ -230,17 +230,26 @@
       "https://www.stompinggroundstcg.com/products/the-best-vol-2-premium-booster-booster-box-englishprb-02"
     ],
     "item_count": 24,
-    "checked_at": 1791262826.4428606,
+    "checked_at": 1791263721.5264416,
     "notified_at": 0
   },
   "Premium Bandai US - One Piece Japanese 4th Anniversary Set (RESTOCK WATCH)": {
-    "status": "in_stock",
+    "status": "unknown",
     "notified_at": 1791259227.8430092,
-    "checked_at": 1791262826.9310029
+    "checked_at": 1791263721.889355
   },
   "Premium Bandai US - new One Piece items": {
     "status": "watching",
     "seen": [
+      "https://p-bandai.com/us/item/F2696548002",
+      "https://p-bandai.com/us/item/F2726687001",
+      "https://p-bandai.com/us/item/F2726688001",
+      "https://p-bandai.com/us/item/F2741862001",
+      "https://p-bandai.com/us/item/F2767005001",
+      "https://p-bandai.com/us/item/F2767008001",
+      "https://p-bandai.com/us/item/F2769065001",
+      "https://p-bandai.com/us/item/F2793738001",
+      "https://p-bandai.com/us/item/F2793743001",
       "https://p-bandai.com/us/item/F2847658001",
       "https://p-bandai.com/us/item/F2907291001",
       "https://p-bandai.com/us/item/N2835216004",
@@ -264,8 +273,8 @@
       "https://p-bandai.com/us/item/N9065180001",
       "https://p-bandai.com/us/item/N9065181001"
     ],
-    "item_count": 20,
-    "checked_at": 1791262823.9185107,
-    "notified_at": 1790848825.2531788
+    "item_count": 12,
+    "checked_at": 1791263718.4875789,
+    "notified_at": 1791263718.4875789
   }
 }
